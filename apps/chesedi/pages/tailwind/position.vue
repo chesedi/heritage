@@ -1,0 +1,47 @@
+<template>
+  <div>
+    <!-- https://tailwindcss.com/docs/position -->
+    <h1 class="mb-3">Position</h1>
+    <div class="relative w-1/2 h-40 bg-green-200">
+      <p>Relative</p>
+      <div class="absolute bottom-0 right-0 bg-teal-500 p-4">
+        <p>Absolute</p>
+      </div>
+    </div>
+
+    <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+      <p>Relative</p>
+      <div class="absolute left-0 top-0 h-16 w-16 bg-teal-500">
+        <p>Absolute</p>
+      </div>
+    </div>
+
+    <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+      <p>Relative</p>
+      <div class="absolute right-0 top-0 h-16 w-16 bg-teal-500">
+        <p>Absolute</p>
+      </div>
+    </div>
+
+    <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+      <p>Relative</p>
+      <div class="absolute bottom-0 h-16 w-16 bg-teal-500">
+        <p>Absolute</p>
+      </div>
+    </div>
+
+    <!-- https://tailwindcss.com/docs/display -->
+    <h1 class="mb-3">Display</h1>
+    <div class="bg-indigo-100 p-10 mb-10 w-[600px]">
+      <span class="inline bg-orange-200 w-[100px] h-[200px]"
+        >1. This is display inline and will wrap normally</span
+      >
+      (this gebrish will added as an inline text)
+      <span class="inline-block bg-orange-200 w-[100px] h-[200px]"
+        >2. This is display inline-block and will not extend beyond it's parent</span
+      >
+      <span class="block">3. This is display block and will move to it's own line</span>
+      <span class="hidden">This is display none and will not display at all</span>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,59 @@
+<template>
+  <div>
+    <!-- 1. Text Colors -->
+
+    <!-- 2. Colors With Different Shades -->
+    <h1>1. Colors With Different Shades</h1>
+    <p class="text-indigo-50">Tailwind</p>
+    <p class="text-indigo-200">Tailwind</p>
+    <p class="text-indigo-100">Tailwind</p>
+    <p class="text-indigo-300">Tailwind</p>
+    <p class="text-indigo-400">Tailwind</p>
+    <p class="text-indigo-500">Tailwind</p>
+    <p class="text-indigo-600">Tailwind</p>
+    <p class="text-indigo-700">Tailwind</p>
+    <p class="text-indigo-800">Tailwind</p>
+    <p class="text-indigo-900">Tailwind</p>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- 2. Background Colors -->
+    <!-- https://tailwindcss.com/docs/background-color -->
+    <h1>2. Background Colors</h1>
+    <p class="bg-pink-600 text-white">Tailwind</p>
+    <p class="bg-red-400 text-white">Tailwind</p>
+    <p class="bg-blue-600 text-white">Tailwind</p>
+
+    <!-- Text Underline -->
+    <h1>3. Text Decoration</h1>
+    <p class="line-through">Tailwind</p>
+    <p class="underline">Tailwind</p>
+    <p class="overline">Tailwind</p>
+    <p class="underline decoration-purple-400">Tailwind</p>
+    <p class="text-purple-600 underline decoration-purple-400">Tailwind</p>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- https://tailwindcss.com/docs/accent-color -->
+    <h1>4. Accent Colors</h1>
+    <input type="checkbox" checked />
+    <input type="checkbox" class="accent-indigo-500" checked />
+    <input type="checkbox" class="accent-teal-500" checked />
+    <input type="checkbox" class="accent-purple-300" checked />
+
+    <br />
+    <hr />
+    <br />
+
+    <h1>5. Arbitrary Colors</h1>
+    <div class="bg-[#c0c0c0] h-10">Hello</div>
+    <div class="text-[#ff0cd0] h-10">Hello</div>
+    <div class="border border-[#ccc000] h-10">Hello</div>
+    <br />
+    <br />
+  </div>
+</template>

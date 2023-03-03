@@ -1,0 +1,21 @@
+{
+  "name": "@agency/chesedi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/supabase": "^0.3.1",
+    "@nuxtjs/tailwindcss": "^6.4.1",
+    "autoprefixer": "^10.4.13",
+    "nuxt": "latest",
+    "postcss": "^8.4.21",
+    "sass": "^1.58.3"
+  }
+}

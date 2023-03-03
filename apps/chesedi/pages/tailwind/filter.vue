@@ -1,0 +1,130 @@
+<template>
+  <div>
+    <!-- Contrast -->
+    <!-- https://tailwindcss.com/docs/contrast -->
+    <div class="border m-10 flex p-10">
+      <img
+        class="w-[250px] h-[250px] contrast-50"
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] contrast-100"
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] contrast-150"
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] contrast-200"
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+      />
+    </div>
+
+    <!-- Brightness -->
+    <!-- https://tailwindcss.com/docs/brightness -->
+    <div class="border m-10 flex p-10">
+      <img
+        class="w-[ 0px] h-[250px] brightness-50"
+        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] brightness-100"
+        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] brightness-150"
+        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] brightness-200"
+        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+      />
+    </div>
+
+    <!-- Grayscale -->
+    <!-- https://tailwindcss.com/docs/grayscale -->
+    <div class="border m-10 flex p-10">
+      <img
+        class="w-[250px] h-[250px]"
+        src="https://images.unsplash.com/photo-1552083375-1447ce886485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] grayscale"
+        src="https://images.unsplash.com/photo-1552083375-1447ce886485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] invert"
+        src="https://images.unsplash.com/photo-1552083375-1447ce886485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      />
+      <img
+        class="w-[250px] h-[250px] sepia"
+        src="https://images.unsplash.com/photo-1552083375-1447ce886485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      />
+    </div>
+
+    <!-- Hue Rotate -->
+    <!-- https://tailwindcss.com/docs/hue-rotate -->
+    <div class="border m-10 flex p-10">
+      <img
+        class="w-[250px] h-[250px]"
+        src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1259&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] hue-rotate-15"
+        src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1259&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] hue-rotate-80"
+        src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1259&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] hue-rotate-180"
+        src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1259&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] hue-rotate-60"
+        src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1259&q=80"
+      />
+    </div>
+
+    <!-- Saturate(채도) -->
+    <!-- https://tailwindcss.com/docs/saturate -->
+    <div class="border m-10 flex p-10">
+      <img
+        class="w-[245px] h-[250px] saturate-50"
+        src="https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] saturate-100"
+        src="https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] saturate-150"
+        src="https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] saturate-200"
+        src="https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80"
+      />
+    </div>
+
+    <!-- Blur -->
+    <!-- https://tailwindcss.com/docs/blur -->
+    <div class="border m-10 flex">
+      <!-- <div class="blur-sm">Blur Small</div> -->
+      <img
+        class="w-[245px] h-[250px] blur"
+        src="https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] blur-lg"
+        src="https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80"
+      />
+      <img
+        class="w-[245px] h-[250px] blur-2xl"
+        src="https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80"
+      />
+    </div>
+  </div>
+</template>
