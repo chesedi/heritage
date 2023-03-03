@@ -1,10 +1,1 @@
-<template>
-  <div>
-    <CarHero />
-  </div>
-</template>
-<script setup>
-useHead({
-  title: 'Cartrader',
-})
-</script>
+<template>Hello from pages!</template>

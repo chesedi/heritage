@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import Navbar from '~/components/layout/navbar.vue'
+</script>
+
 <template>
-  <div>
-    <NavBar />
-    <slot></slot>
+  <div class="h-screen">
+    <Navbar />
+    <slot />
   </div>
 </template>

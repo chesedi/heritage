@@ -1,6 +1,15 @@
-import { defineNuxtConfig } from 'nuxt/config'
-
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// https://v3.nuxtjs.org/api/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@agency/ui', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  css: ['@/assets/css/tailwind.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+  tailwindcss: {},
+  colorMode: {
+    classSuffix: '',
+  },
 })
