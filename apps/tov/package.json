@@ -15,5 +15,15 @@
     "nuxt": "latest",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.0.0",
+    "@vueuse/core": "^8.9.3",
+    "bcrypt": "^5.0.1",
+    "prisma": "^4.0.0",
+    "uuid": "^8.3.2"
+  },
+  "prisma": {
+    "schema": "server/database/schema.prisma"
   }
 }
