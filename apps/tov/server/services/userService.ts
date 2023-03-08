@@ -1,30 +1,25 @@
-type ExistsCheck = {
-  value: boolean
-  message?: string
+import { IUser } from '~~/types/IUser'
+import { RegistationRequest } from '~~/types/IRegistration'
+import { validate } from '~~/server/services/validator'
+
+export async function validateUser(data: RegistationRequest): Promise<FormValidation> {
+  const errors = await validate(data)
+
+  if (errors.size > 0) {
+    return { hasErrors: true, errors }
+  }
+
+  return { hasErrors: false }
 }
 
-type RegistrationErrors = {
-  emailError?: string
-  usernameError?: string
-}
-
-export async function doesUserExists(email: string, username: string): Promise<ExistsCheck> {
-  const emailExists = true
-  const userNameExists = true
-
-  const errors: RegistrationErrors = {}
-
-  if (emailExists) {
-    errors.emailError = `This email, ${email}, is already registered!`
-  }
-  if (userNameExists) {
-    errors.usernameError = `This username, ${email}, is already registered!`
+export function sanitizeUserForFrontend(user: IUser | undefined): IUser {
+  if (!user) {
+    return user
   }
 
-  if (emailExists || userNameExists) {
-    const message = JSON.stringify(errors)
-    return { value: true, message }
-  }
+  delete user.password
+  delete user.loginType
+  delete user.stripeCustomerId
 
-  return { value: false }
+  return user
 }
