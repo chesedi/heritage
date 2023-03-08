@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import '@/assets/css/tailwind.css'
 import BackButton from '~/components/elements/BackButton.vue'
 import { useState } from '#app'
 
@@ -39,6 +38,13 @@ const setColorTheme = (newTheme: Theme) => {
             </svg>
           </button>
         </div>
+        <nuxt-link to="/">
+          <span class="sr-only">Workflow</span>
+          <img
+            class="h-24 w-auto transition duration-500 scale-50 hover:scale-110"
+            src="/img/logo_clear_fsj.png"
+          />
+        </nuxt-link>
         <nav class="hidden md:flex space-x-10">
           <nuxt-link to="/subscribe">
             <span class="text-base font-medium text-gray-500 hover:text-gray-900">
