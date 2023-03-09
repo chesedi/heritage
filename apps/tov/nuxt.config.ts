@@ -13,4 +13,12 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
+  runtimeConfig: {
+    private: {
+      stripeSecretKey: process.env.STRIPE_SECRET_KEY,
+    },
+    public: {
+      appDomain: process.env.API_DOMAIN,
+    },
+  },
 })
