@@ -2,6 +2,7 @@ import { SubPostRes } from '~/types/SubPostRes'
 import {
   createOrUpdateSubscription,
   getUserByStripeCustomerId,
+  getSubscriptionById,
 } from '~/server/database/repositories/userRespository'
 import { IUser } from '~/types/IUser'
 import Stripe from 'stripe'
@@ -46,11 +47,11 @@ export async function handleSubscriptionChange(
   subscription: Stripe.Subscription,
   lastEventDate: number
 ): Promise<boolean> {
-  // const localSubscription = await getSubscriptionById(subscription.id)
-  //
-  // if (localSubscription?.lastEventDate > lastEventDate) {
-  //   return true
-  // }
+  const localSubscription = await getSubscriptionById(subscription.id)
+
+  if (localSubscription?.lastEventDate > lastEventDate) {
+    return true
+  }
 
   const stripeCustomerId = subscription.customer as string
 

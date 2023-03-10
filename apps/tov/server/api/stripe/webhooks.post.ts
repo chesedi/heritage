@@ -6,20 +6,16 @@ export default defineEventHandler(async (event) => {
 
   let subscription: Stripe.Subscription | undefined
 
-  // Handle the event
-  switch (stripeEvent.type) {
-    case 'customer.subscription.created':
-      subscription = stripeEvent.data.object as Stripe.Subscription
-      handleSubscriptionChange(subscription, stripeEvent.created)
-      break
-    case 'customer.subscription.deleted':
-      subscription = stripeEvent.data.object as Stripe.Subscription
-      break
-    case 'customer.subscription.updated':
-      subscription = stripeEvent.data.object as Stripe.Subscription
-      // Then define and call a function to handle the event customer.subscription.updated
-      break
-    default:
-      console.log(`Unhandled event type ${stripeEvent.type}`)
+  const isSubscriptionEvent = stripeEvent.type.startsWith('customer.subscription')
+
+  if (isSubscriptionEvent) {
+    handleSubscriptionChange(subscription, stripeEvent.created)
+    return `handled ${stripeEvent.type}.`
   }
+
+  console.log(`Unhandled event type ${stripeEvent.type}`)
+
+  event.res.statusCode = 400
+
+  return `could not handle ${stripeEvent.type}. No functionality set.`
 })

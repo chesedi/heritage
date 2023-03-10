@@ -54,15 +54,6 @@ export async function getUserById(id: number): Promise<IUser> {
   })
 }
 
-export async function updateStripeCustomerId(data: IUser) {
-  return await prisma.user.update({
-    where: { email: data.email },
-    data: {
-      stripeCustomerId: data.stripeCustomerId,
-    },
-  })
-}
-
 export async function getUserByStripeCustomerId(stripeCustomerId: string): Promise<IUser> {
   return await prisma.user.findFirst({
     where: {
@@ -73,6 +64,23 @@ export async function getUserByStripeCustomerId(stripeCustomerId: string): Promi
       username: true,
       email: true,
       stripeCustomerId: true,
+    },
+  })
+}
+
+export async function getSubscriptionById(stripeId: string): Promise<ISubscription> {
+  return await prisma.subscription.findFirst({
+    where: {
+      stripeId: stripeId,
+    },
+  })
+}
+
+export async function updateStripeCustomerId(data: IUser) {
+  return await prisma.user.update({
+    where: { email: data.email },
+    data: {
+      stripeCustomerId: data.stripeCustomerId,
     },
   })
 }
