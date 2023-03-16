@@ -1,35 +1,34 @@
 <script setup lang="ts">
 import AskJackSidebar from '~/components/elements/AskJackSidebar.vue'
 import AnswerForm from '~/components/elements/AnswerForm.vue'
-// import QuestionForm from '~~/components/elements/QuestionForm.vue'
-// import question from '@agency/tov/server/api/ask-jack/question'
-
+import QuestionForm from '~~/components/elements/QuestionForm.vue'
 const questionId = getParam('id')
-// const me = useUser()
-// const router = useRouter()
-// const showEditForm = ref(false)
-// const showDeleted = ref(false)
+const me = useUser()
+const router = useRouter()
+const showEditForm = ref(false)
+const showDeleted = ref(false)
 const { data: question } = useFetch<IQuestion>(`/api/ask-jack/question?id=${questionId}`, {
   server: false,
 })
 const showAnswerForm = useState('showAnswerForm' + questionId, () => false)
-// const isMine = question?.authorId == me.id
-// async function deleteQuestion() {
-//   const { data: deleted } = await useFetch('/api/ask-jack/delete-question', {
-//     method: 'POST',
-//     body: { questionId },
-//   })
-//   showDeleted.value = true
-//   setTimeout(() => {
-//     router.push('/ask-jack/search')
-//   })
-// }
+const isMine = question?.authorId == me.id
+async function deleteQuestion() {
+  const { data: deleted } = await useFetch('/api/ask-jack/delete-question', {
+    method: 'POST',
+    body: { questionId },
+  })
+  showDeleted.value = true
+  setTimeout(() => {
+    router.push('/ask-jack/search')
+  })
+}
 const editEndpoint = '/api/ask-jack/edit-question'
 function addAnswer(answer: IAnswer) {
   question.value?.answers.push(answer)
   showAnswerForm.value = false
 }
 </script>
+
 <template>
   <div
     class="min-h-full theme-mode bg-gradient-to-b from-white to-indigo-200 dark:bg-gradient-to-b dark:from-slate-800 dark:to-slate-600"

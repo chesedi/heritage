@@ -4,11 +4,11 @@ import AskJackSidebar from '~/components/elements/AskJackSidebar.vue'
 definePageMeta({
   middleware: 'auth',
 })
-// const data: IQuestionPost = reactive({
-//   title: '',
-//   description: '',
-// })
-// const endpoint = '/api/ask-jack/ask'
+const data: IQuestionPost = reactive({
+  title: '',
+  description: '',
+})
+const endpoint = '/api/ask-jack/ask'
 </script>
 <template>
   <div

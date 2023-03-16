@@ -5,15 +5,15 @@ export default defineEventHandler(async (event) => {
   const queries = getQuery(event)
   const questionId = parseInt(queries.id as string)
 
-  return await findQuestion(questionId)
+  const question = await findQuestion(questionId)
 
-  // question.answers.forEach(async (answer: IAnswer) => {
-  //   const user = await getUserById(answer.authorId)
-  //   answer.authorName = '@' + user.username
-  // })
-  //
-  // const user = await getUserById(question.authorId)
-  // question.authName = '@' + user.username
-  //
-  // return question
+  question.answers.forEach(async (answer: IAnswer) => {
+    const user = await getUserById(answer.authorId)
+    answer.authorName = '@' + user.username
+  })
+
+  const user = await getUserById(question.authorId)
+  question.authName = '@' + user.username
+
+  return question
 })

@@ -38,3 +38,23 @@ export async function searchQuestions(query: string): Promise<IQuestion[]> {
 
   return result as IQuestion[]
 }
+
+export async function editQuestion(question: IQuestionPost) {
+  return await prisma.question.update({
+    where: {
+      id: question.id,
+    },
+    data: {
+      title: question.title,
+      description: question.description,
+    },
+  })
+}
+
+export async function deleteQuestion(questionId: number) {
+  return await prisma.question.delete({
+    where: {
+      id: questionId,
+    },
+  })
+}

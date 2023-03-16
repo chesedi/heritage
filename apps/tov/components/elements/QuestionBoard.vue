@@ -9,12 +9,14 @@ const {
 } = await useFetch<IQuestion[]>(() => `/api/ask-jack/search?search=${searchInput.value}`)
 
 refresh()
+
 function search() {
   if (searchInput.value.length >= 3) {
     refresh()
   }
 }
 </script>
+
 <template>
   <div class="w-full md:w-1/3">
     <div>

@@ -3,21 +3,16 @@ definePageMeta({
   middleware: 'auth',
 })
 
+interface Props {
+  data: IQuestionPost
+  endpoint?: String
+}
+const props = defineProps<Props>()
+const data = props.data
 const router = useRouter()
 
-const data: IQuestionPost = reactive({
-  title: '',
-  description: '',
-})
-// interface Props {
-//   data: IQuestionPost
-//   endpoint?: String
-// }
-// const props = defineProps<Props>()
-// const data = props.data
-
 async function postQuestion() {
-  const { data: question } = await useFetch<IQuestion>(() => `/api/ask-jack/ask`, {
+  const { data: question } = await useFetch<IQuestion>(() => `${props.endpoint}`, {
     method: 'post',
     body: { data },
     pick: ['id'],
