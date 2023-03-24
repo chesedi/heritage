@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // https 용도
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 export default defineNuxtConfig({
   app: {

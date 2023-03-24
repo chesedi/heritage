@@ -2,10 +2,23 @@
 definePageMeta({
   middleware: 'auth',
 })
-</script>
+/* Navigation will occur before fetching is complete.
+  Handle pending and error states directly within your component's template
+*/
+const { pending, data: count } = useLazyAsyncData('count', () => $fetch('/api/count'))
 
+watch(count, (newCount) => {
+  console.log('count', count)
+  console.log('newCount', newCount)
+  // Because count starts out null, you won't have access
+  // to its contents immediately, but you can watch it.
+})
+</script>
 <template>
   <h1>Welcome to the dashboard!</h1>
+  <div>
+    {{ pending ? 'Loading' : count }}
+  </div>
   <!--  <div>-->
   <!--        <h1>Nuxt</h1>-->
   <!--        <div>-->
